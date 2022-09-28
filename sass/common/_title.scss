@@ -1,0 +1,17 @@
+
+.title{
+  color: var(--title-color);
+  text-align: center;
+@include font-size(700, 28px, 33px);
+
+
+  margin-bottom: 30px;
+  @include tablet{
+    margin-bottom: 50px;
+  }
+  
+  
+
+ 
+ 
+}

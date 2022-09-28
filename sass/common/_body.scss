@@ -1,0 +1,7 @@
+body {
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: var(--font-family-main);
+ @include font-size(400, 14px, 24px);
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,212 @@
+footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+text-align: center;
+
+
+}
+
+
+ .logo_color-white{
+  color:var(--logo-footer-color);
+ }
+ 
+  .logo--bottom-margin{
+margin-bottom: 20px;
+  }
+
+
+ 
+
+
+
+  .footer__box{
+  @include desktop{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.footer__info{
+  @include desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 70px;
+    }
+    @media screen and (max-width: 767px){    
+      margin-bottom: 60px;
+    }
+  }
+.address {
+  font-style: normal;
+ 
+
+
+}
+
+.address__list{
+  @include desktop{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+}
+.address__link {
+&:hover,
+&:focus {
+  color: var(--accent-color);
+}
+}
+
+
+
+.address__link--white {
+  color: var(--address__link-color-white);
+}
+.address__link--grey{
+  color:var(--address__link-color);
+}
+
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-social{
+ 
+  @media screen and (max-width: 767px){    
+    margin-bottom: 60px;
+  }
+
+  @include desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+ 
+}
+
+.footer-social__text {
+  font-family: 'Roboto';
+  @include font(14px, 700, 1.14);
+ 
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+// .social-footer {
+//   display: flex;
+//   align-items: center;
+//   width: 206px;
+//   height: 80px;
+// }
+.social-link--dark {
+  color: var(--link-footer-color);
+  background-color: var(--link-footer-background);
+  transition: background var(--transition);
+
+  &:hover,
+  &:focus {
+  background-color: var(--accent-color);
+}
+}
+
+
+
+
+
+ .subscribe__box{
+  @include desktop{
+    display: flex;
+
+  }
+ }
+
+.subscribe__text{
+@include font-size(700, 14px, 16px);
+
+text-transform: uppercase;
+color:var(--subscribe__text-color);
+margin-bottom: 20px;
+
+@include desktop{
+  margin-right: auto;
+}
+
+
+}
+.subscribe__input{
+width: 100%;
+@media screen and  (max-width: 320px) {
+  width:200px
+}
+@include tablet{
+  width: 450px;
+}
+ @include desktop{
+ width: 358px;
+ 
+ }
+  height: 50px;
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+background-color: inherit;
+
+&::placeholder{
+  padding: 15px 16px;
+}
+@include only-mobile{
+  margin-bottom:30px
+}
+@include only-tablet{
+  margin-bottom:30px
+}
+
+
+}
+
+.button_flex{
+@extend %align;
+}
+
+.button_padding-subscribe{
+ @include desktop{
+   height: 50px;
+  margin-left: 12px;}
+ 
+}
+
+.subscribe__icon{
+  width:24px ;
+  height: 24px;
+  margin-left: 12px;
+}
+
+.subscribe__wrapper{
+  @include desktop{
+    display: flex;
+    flex-direction: column;
+  
+  }
+}
+.footer-tablet{
+  @include only-tablet{
+    display: flex;
+    align-items: baseline;
+  }
+ 
+  @include only-tablet{
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  @include desktop{
+    display: flex;
+    align-items: baseline;
+  }
+}

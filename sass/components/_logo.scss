@@ -1,0 +1,10 @@
+.logo {
+    display: inline-block;
+    
+  color: var(--accent-color);
+
+  font-family: var(--font-family-logo);
+     @include font(26px, 700, 1.19);
+  letter-spacing: inherit;
+
+}
