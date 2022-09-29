@@ -125,7 +125,7 @@
    
    .mobile-contact-list__link{
      @include font-size(500, 24px, 28px);
-     
+    
      letter-spacing: 0.02em;
      color: var(---mobile-contact-color);
      &:hover{
@@ -142,8 +142,8 @@
    
    .mobile-contact-list__link_tel{
      @include font-size(500, 34px, 40px);
-     @media screen and (max-width:445px){
-      @include font-size (500, 24px, 30px);
+     @media screen and (max-width:479px) {
+      @include font-size (500, 24px, 20px);
      }
 
       letter-spacing: 0.02em;
@@ -159,9 +159,9 @@
    }
     .mobile-social-list__link{
      @include font-size(500, 18px, 22px);
-     @media screen and (max-width:445px){
-      @include font-size(500, 14px, 12px);
-   }
+     @media screen and (max-width:479px) {
+      @include font-size (500, 14px, 20px);
+     }
 
      letter-spacing: 0.02em;
      color: var(--accent-color);
