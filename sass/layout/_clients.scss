@@ -14,11 +14,10 @@ flex-wrap: wrap;
 gap:30px;
 }
 .clients-list__item{
-  @include phone{ width:calc((100% - 30px)/2)};
+ width:calc((100% - 30px)/2);
   @include tablet{width:calc((100% - 60px)/3) };
-  @include desktop {width:calc((100% - 150px)/6) }
+  @include desktop {width:calc((100% - 150px)/6)};
    
-
 }
 
 .clients-list__link {

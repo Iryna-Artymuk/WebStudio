@@ -24,52 +24,48 @@ margin-bottom: 20px;
   .footer__box{
     display: flex;
     flex-direction: column;
-
+    @media screen and (min-width:320px )and (max-width:767px){
+      row-gap: 60px;
+    }
+    @media screen and(min-width:768px) and (max-width:1199px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap:60px;
+      justify-content: space-around;
+      align-items: center;
+    }
+ 
   @include desktop{
-    display: flex;
+
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
+    column-gap: 60px;
    
   }
 }
 .footer__info{
-  @include only-mobile{
-    margin-bottom: 60px;
-  }
+
   @include desktop{
     display: flex;
     flex-direction: column;
+  
     align-items: flex-start;
-    margin-right: 60px;
-
-    }
-
-  }
-
-  .footer__wrapper{
-    display: flex;
-      flex-direction: row;
-      align-items: baseline;
-     
-    @include only-tablet{
-      justify-content: space-around;
-      margin-bottom: 60px;
-    }
-    @include desktop{
-      margin-right: 60px;
-      
-    }
   
 
+    }
+
   }
 
-.address {
-  font-style: normal;
- 
+  .footer__wrapper
 
+  
 
-}
+  
+  .address{
+    font-style: normal;
+  }
+
 
 .address__list{
   @include desktop{
@@ -79,6 +75,7 @@ margin-bottom: 20px;
   }
 }
 .address__link {
+  font-style: normal;
 &:hover,
 &:focus {
   color: var(--accent-color);
@@ -100,11 +97,10 @@ margin-bottom: 20px;
 }
 
 .footer-social{
-@include only-mobile{
-  margin-bottom: 60px;
-}
 
-
+  @media screen and(min-width:768px) and (max-width:1199px){
+    row-gap: 60px;
+  }
   @include desktop{
     display: flex;
     flex-direction: column;
