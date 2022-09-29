@@ -619,25 +619,47 @@ footer {
   margin-bottom: 20px;
 }
 
+.footer__box {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1200px) {
   .footer__box {
     display: flex;
+    flex-direction: row;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .footer__info {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 70px;
+    margin-right: 60px;
   }
 }
-@media screen and (max-width: 767px) {
-  .footer__info {
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrapper {
+    justify-content: space-around;
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    margin-right: 60px;
   }
 }
 
@@ -775,25 +797,6 @@ footer {
   .subscribe__wrapper {
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer-tablet {
-    display: flex;
-    align-items: baseline;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer-tablet {
-    justify-content: space-around;
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-tablet {
-    display: flex;
-    align-items: baseline;
   }
 }
 
@@ -1104,10 +1107,22 @@ footer {
   margin-bottom: 32px;
 }
 
-.checkbox-lable {
+.checkbox-lable-wrapper {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  margin-left: 7px;
+}
+@media screen and (max-width: 455px) {
+  .checkbox-lable-wrapper {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1;
+  }
+}
+
+.checkbox-lable {
   letter-spacing: 0.03em;
   display: flex;
   text-align: center;
@@ -1116,8 +1131,19 @@ footer {
 }
 
 .policy-link {
-  border-bottom: 1px solid var(--accent-color);
   color: var(--accent-color);
+  position: relative;
+}
+
+.policy-link::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
 }
 
 .checkbox-origin {
@@ -1127,7 +1153,6 @@ footer {
 .custom-checkbox {
   width: 16px;
   height: 15px;
-  margin-right: 7px;
   border: 1px solid #212121;
   border-radius: 2px;
   cursor: pointer;
@@ -1270,7 +1295,7 @@ footer {
     color: var(--accent-color);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 380px) {
+@media screen and (max-width: 767px) and (max-width: 445px) {
   .mobile-contact-list__link_tel {
     font-weight: 500;
     font-size: 24px;
@@ -1282,12 +1307,6 @@ footer {
     display: flex;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 380px) {
-  .mobile-social-list {
-    flex-wrap: wrap;
-    row-gap: 10px;
-  }
-}
 @media screen and (max-width: 767px) {
   .mobile-social-list__link {
     font-weight: 500;
@@ -1297,16 +1316,18 @@ footer {
     color: var(--accent-color);
   }
 }
+@media screen and (max-width: 767px) and (max-width: 445px) {
+  .mobile-social-list__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 0.8571428571;
+  }
+}
 @media screen and (max-width: 767px) {
   .mobile-social-list__item:not(:last-child) {
     padding-right: 10px;
     margin-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 380px) {
-  .mobile-social-list__item:not(:last-child) {
-    border: none;
   }
 }
 @media screen and (max-width: 767px) {

@@ -183,9 +183,18 @@ margin-bottom: 4px;
 .form-box{
   margin-bottom:32px ;
 }
+.checkbox-lable-wrapper{
 
-.checkbox-lable{
   @include font-size(400, 12px, 14px);
+  @media screen and (max-width:455px){
+    @include font-size(400, 10px, 10px);
+
+  }
+  letter-spacing: 0.03em;
+margin-left: 7px
+}
+.checkbox-lable{
+
   letter-spacing: 0.03em;
   display: flex;
   text-align: center;
@@ -193,11 +202,19 @@ margin-bottom: 4px;
 justify-content: center;
 
 }
-
 .policy-link{
-  
-  border-bottom: 1px solid var(--accent-color);
-  color:var(--accent-color);
+  color: var(--accent-color);
+  position: relative;
+}
+.policy-link::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--accent-color);
 }
 .checkbox-origin{
   appearance: none;
@@ -206,7 +223,7 @@ justify-content: center;
 .custom-checkbox{
   width:16px;
   height:15px;
-  margin-right: 7px;
+ 
 border: 1px solid #212121;
   border-radius: 2px;
   cursor: pointer; 
