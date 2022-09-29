@@ -142,7 +142,7 @@
    
    .mobile-contact-list__link_tel{
      @include font-size(500, 34px, 40px);
-     @media screen and (max-width:479px) {
+     @media screen and (max-width:420px) {
       @include font-size (500, 24px, 20px);
      }
 
@@ -159,9 +159,10 @@
    }
     .mobile-social-list__link{
      @include font-size(500, 18px, 22px);
-     @media screen and (max-width:479px) {
-      @include font-size (500, 14px, 20px);
+     @media screen and (max-width:420px) {
+      @include font-size (500, 10px, 20px);
      }
+
 
      letter-spacing: 0.02em;
      color: var(--accent-color);

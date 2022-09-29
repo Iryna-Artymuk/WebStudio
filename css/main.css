@@ -1287,7 +1287,7 @@ footer {
     color: var(--accent-color);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 479px) {
+@media screen and (max-width: 767px) and (max-width: 420px) {
   .mobile-contact-list__link_tel {
     font-weight: 500;
     font-size: 24px;
@@ -1308,11 +1308,11 @@ footer {
     color: var(--accent-color);
   }
 }
-@media screen and (max-width: 767px) and (max-width: 479px) {
+@media screen and (max-width: 767px) and (max-width: 420px) {
   .mobile-social-list__link {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.4285714286;
+    font-size: 10px;
+    line-height: 2;
   }
 }
 @media screen and (max-width: 767px) {
