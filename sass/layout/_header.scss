@@ -37,13 +37,13 @@
     align-items: center;
     justify-content: space-between;
   }
+}
   .nav-list{
     display: flex;
     gap: 50px;
   }
   .nav-list__link{
-    padding-top: 32px;
-    padding-bottom: 32px;
+   
     @include font-size(500, 14px ,16px);
     letter-spacing: 0.02em;
 
@@ -56,7 +56,23 @@
 &:focus{
   color: var(--accent-color);
 }
+
+@include tablet{
+padding-top: 28px;
+padding-bottom: 28px;
+}
+
+@include desktop{
+
+padding-top: 32px;
+padding-bottom: 32px;
+
+}
+
   }
+
+  
+
   .nav-list__current{
     position: relative;
     color: var(--accent-color);
@@ -76,177 +92,59 @@
 background-color: var(--accent-color);
 border-radius: 4px;
     }
-  }
 
- 
 
-  .contacts-list__link{
+  }
+  .contacs-list{
+    @include only-tablet{
+       display: flex;
+        flex-direction: column;
+        gap: 10px;}  
 
-    @include font-size(500, 12px, 14px);
-    letter-spacing: 0.02em;
-    color: var(--contacts-link-color);
- transition: color var( --transition);
-   
-&:focus{
-  color: var(--accent-color);
-  &:hover{
-    color: var(--accent-color);
-  }
-}
-  }
-  .contacts-list__icon{
-    fill: currentColor;
-    margin-right: 8px;
-  }
-
-  .contacts-list__link{
+  @include desktop{  
     display: flex;
     align-items: center;
-}
-}
-
-  @include only-tablet{
-    .contacs-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-    }
- 
-
-  }
-
-  @include desktop{
-    .contacs-list{
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-      .nav-list__link{
-        padding-top: 28px;
-        padding-bottom: 28px;
-    }
-    .contacts-list__link{
-      padding-top: 28px;
-      padding-bottom: 28px;
-    }
-   
+    gap: 30px;
   }
   
+  }
+
+
+
+
+.contacts-list__link{
+  display: flex;
+  align-items: center;
+  @include font-size(500, 12px, 14px);
+
+
+@include desktop{
+  @include font-size(500, 14px, 16px);
+}
+letter-spacing: 0.02em;
+color: var(--contacts-link-color);
+transition: color var( --transition);
+
+
+&:focus{
+color: var(--accent-color);
+&:hover{
+color: var(--accent-color);
+}
+}
+}
+
+.contacts-list__icon{
+fill: currentColor;
+margin-right: 8px;
+}
+
+
+
+
 
 
   
 
-//      .header {
-//       border-bottom: 1px solid var(--border-header);
-//     }
 
-
-// .header__wrapper {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .header__navigation{
-//   display: flex;
-//   align-items: center;
-//   margin-right: auto;
-// }
-
-// .nav-list{
-
-// @extend%align;
-//    gap: 30px;
-
-// }
-
-// .nav-list__item:not(:last-child),
-// .nav-contacts-list__item:not(:last-child) {
-//   margin-right: 50px;
-// }
-
-// .nav-list__link{
-//     font-family: inherit;
-//   font-style: inherit;
-//   color: var(--title-color);
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-//   display: block;
-
-//   transition: color var(--transition);
-
-// &:hover,
-// &:focus{
-//     color: var(--accent-color);
-// }
-// }
-
-
-// .contacts-list__link{
-//    display: block;
-//   font-family: inherit;
-//   font-style: inherit;
-//   color: var(--title-color);
-
-//   @include font( 14px, 500, 1.14);
-//   letter-spacing: 0.02em;
-
-//   padding-top: 32px;
-//   padding-bottom: 32px;
- 
-//   transition: color var(--transition);
-
-
-// &:hover,
-// &:focus{
-//   color: var(--accent-color);
-// }
-
-// }
-
-// .nav-list__current {
-//   color: var(--accent-color);
   
-// &::after {
-//   position: absolute;
-//   bottom: 0;
-//   left:0;
-//   content: '';
-//   width: 100%;
-//   height: 4px;
-// margin-bottom: -1px;
-//   background-color: var(--accent-color);
- 
-//   transition: background var(--transition);
-// }
-// }
-
-
-// .nav-list__link {
-//   position: relative;
-// }
-
-
-// .contacs-list {
-//   @include desktop{
-//     @extend%align;
-//    gap: 30px;
-//   }
-
-// }
-
-// .contacts-list__link{
-//   color: var(--text-color);
-//   display: flex;
-//   align-items: center;
-// }
-
-
-// .contacts-list__icon{
-//   margin-right: 10px;
-//   fill: currentColor;
-// }

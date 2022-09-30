@@ -2,15 +2,20 @@
 padding-top: 60px;
 padding-bottom: 60px;
 background-color: var( --team-section-color);
+@include desktop{
+  padding-top: 94px;
+     padding-bottom: 94px;
+}
 
-//   padding-top: 94px;
-//   padding-bottom: 94px;
   
 }
 
 .team-list{
+   display: flex;
+   flex-direction: column;
+   gap:30px;
   @include tablet{
- display: flex;
+flex-direction: row;
  flex-wrap: wrap;
        gap:30px;
      }
